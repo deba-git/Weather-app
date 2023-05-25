@@ -1,13 +1,91 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+:root{
+
+  --section-overlay: rgba(0, 0, 0, 0.7);
+  --background-overlay:rgba(0, 0, 0, 0.3);
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.app{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-overlay);
+}
+.container{
+  max-width: 800px;
+  margin: auto;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.section{
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  color: #ffffff;
+}
+
+.section_inputs, .section_temparature{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--section-overlay);
+}
+
+.section_inputs>input{
+  border: 1px solid white;
+  border-radius: 8px ;
+  background-color:transparent;
+  color: white;
+  padding: 6px;
+  font-size: 20px;
+}
+.section_inputs>button {
+  padding: 10px 50px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #ffffff;
+}
+.section_inputs>button:hover{
+  cursor: pointer;
+  background-color: #d3d3d3;
+}
+
+.cityname_icons{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+
+}
+.cityname_icons>h3{
+  font-size: 18px;
+  font-weight: 200;
+  text-transform: capitalize;
+
+}
+
+.temparature{
+  font-size: 53px;
 }
